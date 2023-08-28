@@ -18,3 +18,21 @@ if (computerNumber === playerNumber) {
 } else {
     console.log('Player won');
 }
+
+
+//MAIL
+
+//definisco le variabili
+const userEmail = prompt('digita la tua email');
+const registeredEmail = ['utente1@gmail.com', 'utente2@gmail.com', 'utente3@gmail.com', 'utente4@gmail.com', 'utente5@gmail.com'];
+
+
+ for (let i = 0; i < registeredEmail.length; i++) {
+    const user = registeredEmail[i];
+} 
+ //controllo se l email è presente nella lista o no
+ if (registeredEmail.includes(userEmail)) {
+    alert("L'utente è gia registrato");
+} else {
+    alert("L'utente non è registrato");
+} 
