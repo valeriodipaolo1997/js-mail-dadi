@@ -4,4 +4,17 @@ Prima di partire a scrivere codice poniamoci qualche domanda: Che ci sia un arra
 Mail
 Chiedi all'utente la sua email, controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato sull’esito del controllo.*/
 
+//genero numeri casuali da 1 a 6
+const computerNumber = Math.floor(Math.random()*6 + 1);
+const playerNumber = Math.floor(Math.random()*6 + 1);
 
+console.log(computerNumber,playerNumber);
+
+//controllo se i numeri generati sono uguali oppure chi ha il punteggio piu alto vince
+if (computerNumber === playerNumber) {
+    console.log('tie');
+} else if (computerNumber > playerNumber) {
+    console.log('computer won');
+} else {
+    console.log('Player won');
+}
