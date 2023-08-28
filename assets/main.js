@@ -23,7 +23,7 @@ if (computerNumber === playerNumber) {
 //MAIL
 
 //definisco le variabili
-const userEmail = prompt('digita la tua email');
+/*const userEmail = prompt('digita la tua email');
 const registeredEmail = ['utente1@gmail.com', 'utente2@gmail.com', 'utente3@gmail.com', 'utente4@gmail.com', 'utente5@gmail.com'];
 
 
@@ -35,4 +35,35 @@ const registeredEmail = ['utente1@gmail.com', 'utente2@gmail.com', 'utente3@gmai
     alert("L'utente è gia registrato");
 } else {
     alert("L'utente non è registrato");
-} 
+} */
+
+
+//BONUS
+const registeredEmail = ['utente1@gmail.com', 'utente2@gmail.com', 'utente3@gmail.com', 'utente4@gmail.com', 'utente5@gmail.com'];
+const btn = document.querySelector('[type=submit]');
+const messageDOM = document.querySelector('.message');
+
+btn.addEventListener('click', (e) => {
+
+    e.preventDefault();
+
+    const email = document.querySelector('#email').value;
+
+    messageDOM.innerHTML = "L'utente non è registrato";
+    
+    //stampo in pagina se l email e gia registrata o se non e stata inserita nessuna email
+    for (let i = 0; i <  registeredEmail.length; i++) {
+        const user =  registeredEmail[i];
+
+        
+        if (email === user) {
+
+            messageDOM.innerHTML = "L'utente è già registrato"
+            //console.log(user, email);
+    
+        } else if (email === '') {
+            messageDOM.innerHTML = "Inserire email"
+        }
+        
+    }
+})
